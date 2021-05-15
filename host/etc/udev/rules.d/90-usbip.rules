@@ -1,0 +1,14 @@
+SUBSYSTEM!="usb", GOTO=""
+
+#Skip all hubs: RPi's and others if presented
+ATTR{idVendor}=="0424", ATTR{idProduct}=="2514|7800", GOTO=""
+ATTR{idVendor}=="1d6b", ATTR{idProduct}=="0002", GOTO=""
+
+#Skip admin's keyboard Dell KB212-B
+ATTR{idVendor}=="413c", ATTR{idProduct}=="2107", GOTO=""
+
+#Act on the other USB-devices:
+ACTION=="add|remove", ENV{DEVTYPE}=="usb_device", TAG+="systemd", ENV{SYSTEMD_WANTS}+="usbip@%k.service"
+
+#End Of File
+LABEL=""

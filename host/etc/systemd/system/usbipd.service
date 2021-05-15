@@ -1,0 +1,23 @@
+[Unit]
+Description=USB-IP Host Daemon
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+Restart=always
+
+EnvironmentFile=/etc/usbip.conf
+
+# usbip-host will start usbip-core by itself 
+ExecStartPre=/usr/sbin/modprobe usbip-host
+ExecStart=/bin/sh -c "/usr/lib/linux-tools/$(uname -r)/usbipd"
+# audio notice of finished booting up and logged in
+ExecStartPost=/usr/bin/aplay ${SERIN}
+
+ExecStop=/usr/sbin/rmmod usbip-host
+ExecStop=/usr/sbin/rmmod usbip-core
+ExecStopPost=/usr/bin/aplay ${SEROUT}
+
+[Install]
+WantedBy=multi-user.target
