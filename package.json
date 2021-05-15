@@ -1,0 +1,25 @@
+{
+  "name": "usbip-service-shell",
+  "version": "0.1.0",
+  "description": "A set of Linux services for the USB/IP Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alpertsev/usbip-service-shell.git"
+  },
+  "keywords": [
+    "usbip",
+    "udev",
+    "systemd",
+    "service"
+  ],
+  "author": "Alexey Pertsev",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/alpertsev/usbip-service-shell/issues"
+  },
+  "homepage": "https://github.com/alpertsev/usbip-service-shell#readme"
+}
