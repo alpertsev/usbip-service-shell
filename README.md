@@ -7,7 +7,7 @@ You can download the initial release [here](https://github.com/alpertsev/usbip-s
 
 ## Requirements, Conventions, Hardware or Software Version Used ##
 
-*Tested on:*
+**Tested on:**
 
 Host - a Raspberry Pi 3B+ single board computer with Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-1034-raspi armv7l)
 
@@ -21,7 +21,7 @@ Installed on both machines:
 
 ## Instructions
  - copy files [here](https://github.com/alpertsev/usbip-service-shell/tree/main/host) to your Host Computer and files [here](https://github.com/alpertsev/usbip-service-shell/tree/main/client) to your Client Computer as file structures dictate.
- - change IP-addresses of your host / client in the corresponded **/etc/usbip.conf** files and run **sudo systemctl enable usbipd && sudo systemctl start usbipd** on both computers
+ - on both machines change IP-addresses of your host / client in the corresponded **/etc/usbip.conf** files and run **sudo systemctl enable usbipd && sudo systemctl start usbipd**
  - run **sudo systemctl enable usbipd-restart** on your Client Computer
  - enjoy!
 
