@@ -5,12 +5,15 @@
 ## Download
 You can download the initial release [here](https://github.com/alpertsev/usbip-service-shell/releases/tag/v0.1.0)
 
-## Requirements, Conventions or Software Version Used ##
+## Requirements, Conventions, Hardware or Software Version Used ##
+
+*Tested on:*
+
 Host - a Raspberry Pi 3B+ single board computer with Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-1034-raspi armv7l)
 
 Client - a GIGABYTE™ C246WU4 i3-8100 workstation with Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-1034-genetic x86_64)
 
-On both machines installed:
+Installed on both machines:
  * OpenSSH_8.2p1
  * OpenSSL 1.1.1f 31 Mar 2020
  * usbip-utils 2.0
@@ -18,8 +21,7 @@ On both machines installed:
 
 ## Instructions
  - copy files [here](https://github.com/alpertsev/usbip-service-shell/tree/main/host) to your Host Computer and files [here](https://github.com/alpertsev/usbip-service-shell/tree/main/client) to your Client Computer as file structures dictate.
- - change IP-addresses of your host / client in the corresponded **/etc/usbip.conf** files on both computers
- - run **sudo systemctl enable usbipd && sudo systemctl start usbipd** on both computers
+ - change IP-addresses of your host / client in the corresponded **/etc/usbip.conf** files and run **sudo systemctl enable usbipd && sudo systemctl start usbipd** on both computers
  - run **sudo systemctl enable usbipd-restart** on your Client Computer
  - enjoy!
 
