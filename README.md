@@ -29,7 +29,7 @@ Installed on both machines:
 - not yet
 
 ## Development
- - get rid aof ip-addresses in config files: used them from **hostname -I** and **~/.ssh/known-hosts**
+ - get rid of ip-addresses in config files: take them from **hostname -I** and **~/.ssh/known-hosts**
  - Power Management implementation for USBIP Host
  - make BT version, additionally to Wi-Fi
  - speed up ssh-commands
