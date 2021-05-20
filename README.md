@@ -30,10 +30,10 @@ Installed on both machines:
 
 ## Development
  - get rid of ip-addresses in config files: take them from **hostname -I** and **~/.ssh/known-hosts**
- - Power Management implementation for USBIP Host
- - make BT version, additionally to Wi-Fi
+ - ~~Power Management implementation for USBIP Host~~
+ - ~~make BT version, additionally to Wi-Fi~`
  - speed up ssh-commands
- - Proximity Sensor Interface to wake up the host
+ - ~~Proximity Sensor Interface to wake up the host~~
  
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
