@@ -9,9 +9,9 @@ You can download the initial release [here](https://github.com/alpertsev/usbip-s
 
 **Tested on:**
 
-Host - a Raspberry Pi 3B+ single board computer with Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-1034-raspi armv7l)
+Host - a Raspberry Pi 3B+ single board computer with Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-1035-raspi armv7l)
 
-Client - a GIGABYTE™ C246WU4 i3-8100 workstation with Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-1034-genetic x86_64)
+Client - a GIGABYTE™ C246WU4 i3-8100 workstation with Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-73-genetic x86_64)
 
 Installed on both machines:
  * OpenSSH_8.2p1
