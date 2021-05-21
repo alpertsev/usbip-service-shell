@@ -1,6 +1,6 @@
 # usbip-service-shell
 
-**usbip-service-shell** is a set of Linux services for the **USB/IP Project** that allow you to take no actions needed for handling sudden reboots and/or plug/unplug USB devices on fly
+**usbip-service-shell** is a set of Linux services for the **USB/IP Project** that allows you to take no actions needed for handling sudden reboots and/or plug/unplug USB devices on fly
 
 ## Download
 You can download the initial release [here](https://github.com/alpertsev/usbip-service-shell/releases/tag/v0.1.0)
