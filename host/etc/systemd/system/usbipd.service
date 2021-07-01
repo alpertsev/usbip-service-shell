@@ -1,0 +1,25 @@
+[Unit]
+Description=USB-IP Host Daemon
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+Restart=always
+
+# usbip-host will start usbip-core by itself 
+ExecStartPre=/usr/sbin/modprobe usbip-host
+
+ExecStart=/bin/sh -c "/usr/lib/linux-tools/$(uname -r)/usbipd"
+
+# prepare environment variables for usbip@x-x.x.x services: the first ip-address is host's
+ExecStartPost=/bin/sh -c "echo HERE=$(hostname -I | awk '{print $(NF)}') > /tmp/usbip.tmp"
+
+# not really necessary but let's remove tmp-file for a sake of accuracy
+ExecStop=rm /tmp/usbip.tmp
+# unload modules
+ExecStop=/usr/sbin/rmmod usbip-host
+ExecStop=/usr/sbin/rmmod usbip-core
+
+[Install]
+WantedBy=multi-user.target
