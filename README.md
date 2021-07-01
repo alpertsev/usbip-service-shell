@@ -26,7 +26,7 @@ Installed on both machines:
  - enjoy!
 
 ## Known Issues
-- silence canberra-gtk-play
+- silenced canberra-gtk-play
 
 ## Development
  - v0.1.1 faster ssh-commands execution and no config files in use.
