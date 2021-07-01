@@ -26,13 +26,12 @@ Installed on both machines:
  - enjoy!
 
 ## Known Issues
-- not yet
+- silence canberra-gtk-play
 
 ## Development
- - get rid of ip-addresses in config files: take them from **hostname -I** and **~/.ssh/known-hosts**
+ - v0.1.1 faster ssh-commands execution and no config files in use.
  - ~~Power Management implementation for USBIP Host~~
  - ~~make BT version, additionally to Wi-Fi~~
- - speed up ssh-commands
  - ~~Proximity Sensor Interface to wake up the host~~
  
 ## Contributing
