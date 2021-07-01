@@ -29,6 +29,7 @@ Installed on both machines:
 - silenced canberra-gtk-play
 
 ## Development
+ - v0.1.0 initial release.
  - v0.1.1 faster ssh-commands execution and no config files in use.
  - ~~Power Management implementation for USBIP Host~~
  - ~~make BT version, additionally to Wi-Fi~~
