@@ -1,0 +1,24 @@
+[Unit]
+Description=USB-IP Deamon Remote Restarting (runs by client)
+After=network-online.target usbipd.service
+Wants=network-online.target usbipd.service
+
+[Service]
+Type=simple
+
+EnvironmentFile=/etc/usbip.conf
+
+# Is any USB port already available?
+# If so - restart usbipd.service remotely to be attached.
+# If not (file is empty) - nothing to do, USB will be attached
+# later on while being inserted into the host.
+ConditionFileNotEmpty=/tmp/usbip-exportable-list
+ExecStart=-ssh THERE "systemctl restart usbipd"
+
+# Clean up usbipd's garbage
+ExecStartPost=-rm /tmp/usbip-exportable-list 
+ExecStartPost=systemctl reset-failed
+#ExecStartPost=-canberra-gtk-play --file=/usr/share/sounds/freedesktop/stereo/service-login.oga
+
+[Install]
+WantedBy=multi-user.target
