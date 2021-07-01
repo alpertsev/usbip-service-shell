@@ -21,7 +21,7 @@ Installed on both machines:
 
 ## Instructions
  - copy files [here](https://github.com/alpertsev/usbip-service-shell/tree/main/host) to your Host Computer and files [here](https://github.com/alpertsev/usbip-service-shell/tree/main/client) to your Client Computer as file structures dictate.
- - on both machines change IP-addresses of your host / client in the corresponded **/etc/usbip.conf** files and run **sudo systemctl enable usbipd && sudo systemctl start usbipd**
+ - on both machines change IP-addresses of your host / client in client's / host's **/root/.ssh/config** files and run **sudo systemctl enable usbipd && sudo systemctl start usbipd**
  - run **sudo systemctl enable usbipd-restart** on your Client Computer
  - enjoy!
 
