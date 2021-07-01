@@ -1,0 +1,26 @@
+[Unit]
+Description=USB-IP Binding %i
+After=network-online.target usbipd.service
+Wants=network-online.target usbipd.service
+PartOf=usbipd.service
+StopWhenUnneeded=yes
+
+[Service]
+Type=simple
+RemainAfterExit=yes
+
+# {HERE} has been defined from the below
+EnvironmentFile=/tmp/usbip.tmp
+
+# binding a device itself
+ExecStart=/bin/sh -c "/usr/lib/linux-tools/$(uname -r)/usbip bind -b %i"
+# and attching the device on remote computer
+ExecStartPost=ssh THERE "/bin/systemctl start usbip@${HERE}:%i"
+
+# expecting errors of unbinding actually "already disconnected device"
+ExecStop=ssh THERE "/bin/systemctl stop usbip@${HERE}:%i"
+ExecStop=-/bin/sh -c "/usr/lib/linux-tools/$(uname -r)/usbip unbind -b %i"
+ExecStop=/bin/systemctl reset-failed
+
+[Install]
+WantedBy=multi-user.target
