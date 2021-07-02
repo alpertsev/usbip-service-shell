@@ -11,7 +11,7 @@ You can download the last release [here](https://github.com/alpertsev/usbip-serv
 
 Host - a Raspberry Pi 3B+ single board computer with Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-1036-raspi armv7l)
 
-Client - a GIGABYTE™ C246WU4 i3-8100 workstation with Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-74-genetic x86_64)
+Client - a GIGABYTE™ C246WU4 i3-8100 workstation with Ubuntu 20.04.1 LTS (GNU/Linux 5.4.0-77-genetic x86_64)
 
 Installed on both machines:
  * OpenSSH_8.2p1
